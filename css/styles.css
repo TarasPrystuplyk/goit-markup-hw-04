@@ -158,14 +158,23 @@ span {
   margin-right: 0;
 }
 
-.contact-tel,
-.contact-link:hover {
+.item:hover,
+.item:focus {
+}
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
-  font-weight: 500;
+  /* font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  text-decoration: none; */
+}
+
+.contact-tel:hover,
+.contact-tel:focus {
+  color: var(--accent-color);
 }
 
 .contact-link {
@@ -190,14 +199,25 @@ span {
 .header-svg {
   width: 16px;
   height: 12px;
-  fill: var(--accent-color);
+  fill: var(--primary-text-color);
   margin-right: 10px;
+}
+
+.header-svg:hover,
+.header-svg:focus {
+  /* background-color: #2196f3; */
+  fill: #2196f3;
+}
+
+.header-tel-svg:hover,
+.header-tel-svg:focus {
+  fill: #2196f3;
 }
 
 .header-tel-svg {
   width: 10px;
   height: 16px;
-  fill: var(--accent-color);
+  fill: var(--primary-text-color);
   margin-right: 10px;
 }
 
@@ -212,7 +232,7 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 /* justify-content: center; */
 
@@ -270,6 +290,8 @@ span {
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
 .onspecial-svg {
@@ -341,6 +363,14 @@ span {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   margin-bottom: 50px;
+}
+
+.team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background: #f5f4fa;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .container-team {
@@ -450,9 +480,14 @@ span {
   height: 100%;
   border-radius: 50%;
   display: flex;
-  /* background-color: tomato; */
+  /* background-color: #afb1b8; */
   justify-content: center;
   align-items: center;
+  color: #afb1b8;
+}
+
+.team-social-link {
+  /* fill: #afb1b8; */
 }
 
 .team-svg {
@@ -462,14 +497,14 @@ span {
   display: flex;
   /* background-color: tomato; */
   justify-content: center;
-  fill: #ffffff;
+  fill: currentColor;
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-  fill: #ffffff;
+  color: #ffffff;
 }
 
 .section-client {
@@ -512,6 +547,13 @@ span {
   margin-left: 30px;
 }
 
+.client-item:hover,
+.client-item:focus {
+  background-color: #2196f3;
+  /* fill: #afb1b8; */
+  color: #2196f3;
+}
+
 .clients-list {
   display: flex;
   justify-content: center;
@@ -526,6 +568,7 @@ span {
   justify-content: center;
   /* align-items: center; */
   padding: 16px 32px;
+  fill: #afb1b8;
 }
 
 .client-svg {
@@ -533,6 +576,7 @@ span {
   height: 60px;
   display: flex;
   justify-content: center;
+  fill: #afb1b8;
 }
 
 /* CSS Для Портфолио */
@@ -548,7 +592,25 @@ span {
   align-items: center;
   /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12); */
+  /* border-radius: 4px; */
+}
+
+.button-primarry:hover,
+.button-primarry:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.button-secondery:hover,
+.button-secondery:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 
 .button-primarry {
@@ -559,8 +621,10 @@ span {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #ffffff;
-  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  /* background: #f5f4fa; */
+  /* border-radius: 4px; */
+  /* background-color: var(--accent-color); */
   cursor: pointer;
   list-style: none;
   justify-content: center;
@@ -585,12 +649,14 @@ span {
   margin-right: 8px;
 }
 
-.btn-item:hover,
+/* .btn-item:hover,
 .btn-item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-}
+  background-color: var(--accent-color);
+  color: #ffffff;
+} */
 
 .project-list {
   list-style: none;
@@ -709,9 +775,11 @@ span {
 }
 
 .footer-social {
-  padding-top: 72px;
-  padding-bottom: 100px;
-  padding-left: 70px;
+  /* padding-top: 72px;
+  padding-bottom: 100px; */
+  margin-left: 70px;
+  margin-top: 12px;
+  padding-bottom: 40px;
 }
 
 .title-foooter-link {
@@ -721,7 +789,7 @@ span {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-social-list {
@@ -760,7 +828,7 @@ span {
   height: 20px;
   /* border-radius: 50%; */
   display: flex;
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
   justify-content: center;
   fill: #ffffff;
   /* border-radius: 50%; */
