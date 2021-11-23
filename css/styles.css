@@ -543,15 +543,13 @@ span {
   border-radius: 4px;
 }
 
-.client-item + .client-item {
-  margin-left: 30px;
-}
-
 .client-item:hover,
 .client-item:focus {
-  background-color: #2196f3;
-  /* fill: #afb1b8; */
-  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.client-item + .client-item {
+  margin-left: 30px;
 }
 
 .clients-list {
@@ -569,6 +567,13 @@ span {
   /* align-items: center; */
   padding: 16px 32px;
   fill: #afb1b8;
+}
+
+.client-svg:hover,
+.client-svg:focus {
+  /* background-color: #2196f3; */
+  /* fill: #afb1b8; */
+  fill: #2196f3;
 }
 
 .client-svg {
@@ -780,6 +785,7 @@ span {
   margin-left: 70px;
   margin-top: 12px;
   padding-bottom: 40px;
+  align-items: baseline;
 }
 
 .title-foooter-link {
